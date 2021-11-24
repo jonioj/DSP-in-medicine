@@ -61,11 +61,5 @@ ax[4].plot(averages[3])
 # %% SAVING DATA
 with open(os.path.join(data_path,'realizations.p'), 'wb') as f:
     pickle.dump(averages,f)
-# %% CHECKING SIMILARITY
-
-for avr in averages:
-    fs,coh = sg.coherence(signal_chunk,avr)
-    print(coh.mean())
-
 
 
